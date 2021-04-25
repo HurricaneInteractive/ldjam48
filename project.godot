@@ -23,23 +23,11 @@ _global_script_classes=[ {
 "class": "Core",
 "language": "GDScript",
 "path": "res://investigate/scripts/Core.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://Player/PlayerMain.gd"
-}, {
-"base": "Node2D",
-"class": "Tombstone",
-"language": "GDScript",
-"path": "res://tombstone/Gravestone.gd"
 } ]
 _global_script_class_icons={
 "ChoiceBase": "",
 "ChoiceButton": "",
-"Core": "",
-"Player": "",
-"Tombstone": ""
+"Core": ""
 }
 
 [application]
