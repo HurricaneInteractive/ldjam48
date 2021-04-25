@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://investigate/scripts/StartGame.gd" type="Script" id=1]
+[ext_resource path="res://investigate/fonts/jetbrains_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://investigate/assets/title2.png" type="Texture" id=3]
+[ext_resource path="res://investigate/assets/title1.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.0196078, 0.105882, 0.152941, 1 )
+corner_detail = 7
+
+[sub_resource type="Theme" id=4]
+ScrollContainer/styles/bg = SubResource( 3 )
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_top = 0.294479
+margin_right = 320.0
+margin_bottom = 180.294
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -149.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/MarginContainer"]
+margin_right = 144.0
+margin_bottom = 170.0
+theme = SubResource( 4 )
+
+[node name="CenterContainer" type="VBoxContainer" parent="Control/MarginContainer/ScrollContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 139.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/ScrollContainer/CenterContainer"]
+margin_right = 134.0
+margin_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "\"I'm on the brink of being fired the brass doesn't appreciate how I handle interrogations, this will my last chance to show them I am the best interrogator on the force\".
+
+\"I have to make sure I can get a [color=#33b1d1]confession[/color] without [color=#ff5a00]angering[/color] the prisoner too much.\"
+
+\"Leaning on [color=#33b1d1]evidence[/color] is preferred. But that won't stop me from throwing in a [color=#59b32d]lie[/color] or two. Just need to read his body language to see how [color=#59b32d]suspicious[/color] he is getting.\"
+
+\"I should be able to throw off his [color=#59b32d]suspicion[/color] by antagonising his a bit by targeting his [color=#ff5a00]dislikes[/color]\"
+
+\"And to cool him down a bit, I can just pretend to [color=#158375]like[/color] whatever we found out about while investigating him.\"
+
+\"I won't have that long in the room with him so I will need to move fast and get this [color=#33b1d1]confession[/color]\""
+text = "\"I'm on the brink of being fired the brass doesn't appreciate how I handle interrogations, this will my last chance to show them I am the best interrogator on the force\".
+
+\"I have to make sure I can get a confession without angering the prisoner too much.\"
+
+\"Leaning on evidence is preferred. But that won't stop me from throwing in a lie or two. Just need to read his body language to see how suspicious he is getting.\"
+
+\"I should be able to throw off his suspicion by antagonising his a bit by targeting his dislikes\"
+
+\"And to cool him down a bit, I can just pretend to like whatever we found out about while investigating him.\"
+
+\"I won't have that long in the room with him so I will need to move fast and get this confession\""
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 6.47858
+margin_top = 91.5451
+margin_right = 161.479
+margin_bottom = 141.545
+rect_rotation = -19.5881
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]

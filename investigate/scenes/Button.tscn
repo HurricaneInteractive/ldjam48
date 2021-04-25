@@ -1,0 +1,309 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://investigate/assets/dislikeButton1.png" type="Texture" id=1]
+[ext_resource path="res://investigate/assets/icons/icon3.png" type="Texture" id=2]
+[ext_resource path="res://investigate/assets/dislikeButton3.png" type="Texture" id=3]
+[ext_resource path="res://investigate/assets/likeButton3.png" type="Texture" id=4]
+[ext_resource path="res://investigate/assets/icons/icon2.png" type="Texture" id=5]
+[ext_resource path="res://investigate/assets/lieButton1.png" type="Texture" id=6]
+[ext_resource path="res://investigate/assets/icons/icon8.png" type="Texture" id=7]
+[ext_resource path="res://investigate/assets/button3.png" type="Texture" id=8]
+[ext_resource path="res://investigate/assets/icons/icon5.png" type="Texture" id=9]
+[ext_resource path="res://investigate/assets/lieButton3.png" type="Texture" id=10]
+[ext_resource path="res://investigate/assets/likeButton1.png" type="Texture" id=11]
+[ext_resource path="res://investigate/assets/button1.png" type="Texture" id=12]
+[ext_resource path="res://investigate/scripts/Button.gd" type="Script" id=13]
+[ext_resource path="res://investigate/scripts/Confession.gd" type="Script" id=14]
+[ext_resource path="res://investigate/scripts/Like.gd" type="Script" id=15]
+[ext_resource path="res://investigate/scripts/Dislike.gd" type="Script" id=16]
+[ext_resource path="res://investigate/scripts/Lie.gd" type="Script" id=17]
+[ext_resource path="res://investigate/assets/icons/icon1.png" type="Texture" id=18]
+[ext_resource path="res://investigate/assets/icons/icon6.png" type="Texture" id=19]
+[ext_resource path="res://investigate/assets/icons/icon4.png" type="Texture" id=20]
+[ext_resource path="res://investigate/assets/icons/icon9.png" type="Texture" id=21]
+[ext_resource path="res://investigate/assets/icons/icon7.png" type="Texture" id=22]
+[ext_resource path="res://investigate/assets/icons/icon14.png" type="Texture" id=23]
+[ext_resource path="res://investigate/assets/icons/icon10.png" type="Texture" id=24]
+[ext_resource path="res://investigate/assets/icons/icon13.png" type="Texture" id=25]
+[ext_resource path="res://investigate/assets/icons/icon11.png" type="Texture" id=26]
+[ext_resource path="res://investigate/assets/icons/icon12.png" type="Texture" id=27]
+[ext_resource path="res://investigate/assets/icons/icon17.png" type="Texture" id=28]
+[ext_resource path="res://investigate/assets/icons/icon15.png" type="Texture" id=29]
+[ext_resource path="res://investigate/assets/icons/icon16.png" type="Texture" id=30]
+
+[node name="Button" type="Control"]
+margin_right = 32.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confession" type="TextureButton" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 12 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+suspicion_increase = 8
+anger_increase = 8
+
+[node name="Search" type="TextureRect" parent="Confession"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 29 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="File" type="TextureRect" parent="Confession"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 30 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Note" type="TextureRect" parent="Confession"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 28 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Like" type="TextureButton" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 11 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 15 )
+__meta__ = {
+"_editor_description_": ""
+}
+anger_decrease = -2
+suspicion_increase = 6
+confession_decrease = -1
+match_reward = 6
+
+[node name="Cat" type="TextureRect" parent="Like"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 24 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dog" type="TextureRect" parent="Like"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 26 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Food" type="TextureRect" parent="Like"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 27 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coffee" type="TextureRect" parent="Like"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 22 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Running" type="TextureRect" parent="Like"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 25 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reading" type="TextureRect" parent="Like"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 23 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dislike" type="TextureButton" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 1 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 16 )
+__meta__ = {
+"_editor_description_": ""
+}
+anger_increase = 15
+suspicion_decrease = -6
+confession_decrease = -3
+
+[node name="Prison" type="TextureRect" parent="Dislike"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cops" type="TextureRect" parent="Dislike"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chilli" type="TextureRect" parent="Dislike"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 19 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coffee" type="TextureRect" parent="Dislike"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 22 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bee" type="TextureRect" parent="Dislike"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fish" type="TextureRect" parent="Dislike"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 21 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lie" type="TextureButton" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+mismatch_pently = 40
+default_suspicion_increase = 15
+anger_increase = 15
+confession_increase = 15
+
+[node name="Murder" type="TextureRect" parent="Lie"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 18 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Theft" type="TextureRect" parent="Lie"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+stretch_mode = 4
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Trespassing" type="TextureRect" parent="Lie"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+[connection signal="mouse_entered" from="Confession" to="Confession" method="_on_Mouse_Entered"]
+[connection signal="mouse_exited" from="Confession" to="Confession" method="_on_Mouse_Exited"]
+[connection signal="mouse_entered" from="Like" to="Like" method="_on_Mouse_Entered"]
+[connection signal="mouse_exited" from="Like" to="Like" method="_on_Mouse_Exited"]
+[connection signal="mouse_entered" from="Dislike" to="Dislike" method="_on_Mouse_Entered"]
+[connection signal="mouse_exited" from="Dislike" to="Dislike" method="_on_Mouse_Exited"]
+[connection signal="mouse_entered" from="Lie" to="Lie" method="_on_Mouse_Entered"]
+[connection signal="mouse_exited" from="Lie" to="Lie" method="_on_Mouse_Exited"]

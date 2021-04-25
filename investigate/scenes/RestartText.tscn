@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://investigate/fonts/jetbrains_font.tres" type="DynamicFont" id=1]
+
+[node name="ColorRect" type="ColorRect"]
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0.0666667, 0.0392157, 0.0117647, 0.72549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+margin_bottom = -25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_right = 320.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 1 )
+text = "Press (r) to play again
+Press (m) to go back to the menu"
+align = 1
+valign = 1
